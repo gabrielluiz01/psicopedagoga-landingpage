@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="responsive.css">
+  <title>Simone Garcia - Psicopedagoga</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <!-- RESPONSIVE MENU -->
+       <div class="responsive-menu">
+         <span class="logo-container">
+             <img src="./assets/logo.jpeg" alt="" class="logo">
+             <h2>Simone Garcia</h2>
+           </span>
+         <button class="list-item--button" onclick="sendMessage()">
+            Agendar Consulta
+        </button>
+       </div>
+       <!-- <div class="responsive-menu">
+        <span class="logo-container">
+           <img src="./assets/logo.jpeg" alt="" class="logo">
+           <h2>Simone Garcia</h2>
+         </span>
+         <button class="menu-btn">
+           <img src="./assets/menu.svg" alt="" onclick="openMenu()">
+         </button>
+       </div>
+       <div class="menu-modal">
+           <img src="./assets/close-icon.svg" alt="" onclick="closeMenu()">
+           <ul>
+             <li>Sobre</li>
+             <li>Serviços</li>
+             <li>Contatos</li>
+             <li>Agendar Consulta</li>
+           </ul>
+        </div> -->
+      <!-- RESPONSIVE MENU -->
+      <div class="menu-container">
+         <span class="logo-container">
+           <img src="./assets/logo.jpeg" alt="" class="logo">
+           <h2>Simone Garcia</h2>
+         </span>
+         <span class="menu">
+           <ul>
+             <li class="list-item">
+               <a href="#about">
+                 Sobre
+               </a>
+             </li>
+             <li class="list-item">
+               <a href="#services">
+                 Serviços
+               </a>
+             </li>
+             <li class="list-item">
+               <a href="#contact">
+                 Contatos
+               </a>
+             </li>
+             <li class="list-item--button" onclick="sendMessage()">
+               Agendar Consulta
+             </li>
+           </ul>
+         </span>    
+        </div>
+    </div>
+  </header>
+  <main>
+    <section class="gray-container">
+      <div class="container">
+        <div class="content-info">
+          <div class="pill">
+            Psicopedagoga Especialista
+          </div>
+          <h2 class="title">Transformando <b>dificuldades</b> em <b>conquistas</b></h2>
+          <p>Ajudo crianças, adolescentes e adultos a superarem dificuldades de aprendizagem, desenvolvendo todo o potencial único de cada pessoa através de métodos personalizados e eficazes.</p>
+          <span class="box-buttons">
+            <button class="schedule-btn" onclick="sendMessage()">
+              <img class="chat" src="./assets/message-circle.svg" alt="chat" /> 
+              Agendar consulta
+            </button>
+            <button class="email-btn" onclick="redirectEmail(event)">
+              <img src="./assets/mail.svg" alt="" class="email">
+              Enviar email
+            </button>
+          </span>
+          <div class="experience-info">
+            <span>
+              <p>500+</p>
+              <p>Pacientes atendidos</p>
+            </span>
+            <span>
+              <p>10+</p>
+              <p>Anos de experiência</p>
+            </span>
+            <span>
+              <p>95%</p>
+              <p>Taxa de sucesso</p>
+            </span>
+          </div>
+        </div>
+        <div class="image-block">
+          <img src="https://images.unsplash.com/photo-1703449481095-bb99a6928f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHRoZXJhcGlzdHxlbnwxfHx8fDE3NTU3MTA3ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
+          alt="">
+        </div>
+      </div>
+    </section>
+    <section class="white-container">
+      <div class="container" id="about">
+        <div class="about">
+          <h2 class="about-title">Sobre <b>Simone Garcia</b></h2>
+          <p class="about-description">Com mais de uma década de experiência em psicopedagogia, 
+            dedico minha carreira a ajudar pessoas de todas as idades a superarem dificuldades de aprendizagem e desenvolverem todo seu potencial.</p>
+          <p class="about-description">Acredito que cada pessoa tem uma forma única de aprender, 
+            e meu papel é descobrir qual é essa forma e criar estratégias personalizadas para que o aprendizado aconteça de maneira natural e prazerosa.</p>
+          <div class="cards-container">
+            <div class="card">
+              <span class="image-box">
+                <img src="./assets/graduation-cap.svg" alt="">
+              </span>
+              <span>
+                <p class="card-title">Formação Acadêmica</p>
+                <p class="card-description">Graduação em Psicopedagogia e Pós-graduação em Neuropsicopedagogia</p>
+              </span>
+            </div> 
+            <div class="card">
+              <span class="image-box">
+                <img src="./assets/award.svg" alt="">
+              </span>
+              <span>
+                <p class="card-title">Certificações</p>
+                <p class="card-description">Certificações em TEA, TDAH e Dificuldades de aprendizagem</p>
+              </span>
+            </div> 
+            <div class="card">
+              <span class="image-box">
+                <img src="./assets/heart-white.svg" alt="">
+              </span>
+              <span>
+                <p class="card-title">Abordagem Humazinada</p>
+                <p class="card-description">Atendimento personalizado respeitando individualidade de cada pessoa</p>
+              </span>
+            </div> 
+            <div class="card">
+              <span class="image-box">
+                <img src="./assets/users.svg" alt="">
+              </span>
+              <span>
+                <p class="card-title">Experiência Comprovada</p>
+                <p class="card-description">Mais de 10 anos ajudando famílias a superarem desafios</p>
+              </span>
+            </div> 
+          </div>
+        </div>
+        <div class="image-block">
+          <img src="https://images.unsplash.com/photo-1542725752-e9f7259b3881?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlZHVjYXRpb24lMjBib29rcyUyMGxlYXJuaW5nfGVufDF8fHx8MTc1NTcxMDc4Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="gray-container">
+      <div class="container-col" id="services">
+        <section class="services">
+          <h2>Serviços <b>Especializados</b></h2>
+          <p class="description">
+            Ofereço uma gama completa de serviços psicopedagógicos para atender às necessidades específicas de cada pessoa e família.
+          </p>
+          <div class="service-card-container">
+            <div class="service-card">
+              <span class="title-box">
+                <span class="image-box--orange">
+                 <img src="./assets/brain.svg" alt="">
+               </span>
+                <p class="service-title">Avaliação Psicopedagógica</p>
+              </span>
+              <p class="service-description">Diagnóstico completo para identificar dificuldades de aprendizagem e potencialidades</p>
+              <ul class="service-list">
+                <li>Análise cognitiva</li>
+                <li>Relatório detalhado</li>
+                <li>Orientações específicas</li>
+              </ul>
+            </div>
+            <div class="service-card">
+               <span class="title-box">
+                <span class="image-box--orange">
+                 <img src="./assets/book-open.svg" alt="">
+               </span>
+                <p class="service-title">Intervenção Psicopedagógica</p>
+              </span>
+              <p class="service-description">Acompanhamento personalizado para superar dificuldades e desenvolver habilidades</p>
+              <ul class="service-list">
+                <li>Técnicas especializadas</li>
+                <li>Acompanhamento individual</li>
+                <li>Plano personalizado</li>
+              </ul>
+            </div>
+            <div class="service-card">
+               <span class="title-box">
+                <span class="image-box--orange">
+                 <img src="./assets/users.svg" alt="">
+               </span>
+                <p class="service-title">Orientação Familiar</p>
+              </span>
+              <p class="service-description">Suporte e orientação para famílias lidarem com dificuldades de aprendizagem</p>
+              <ul class="service-list">
+                <li>Reuniões familiares</li>
+                <li>Estratégias domiciliares</li>
+                <li>Suporte contínuo</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <span class="title-box">
+                <span class="image-box--orange">
+                 <img src="./assets/target.svg" alt="">
+               </span>
+               <p class="service-title">Treinamento Cognitivo</p>
+              </span>
+              <p class="service-description">Desenvolvimento de funções executivas, atenção e memória</p>
+              <ul class="service-list">
+                <li>Exercícios cognitivos</li>
+                <li>Jogos terapêuticos</li>
+                <li>Monitoramento de progresso</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="modality-card-container">
+          <h2>Modalidades de Atendimento</h2>
+          <div class="modality-content">
+            <div class="modality-card">
+              <span class="image-box">
+                <img src="./assets/map-pin.svg" alt="">
+              </span>
+              <span>
+                <p class="modality-card-title">Presencial</p>
+                <p class="modality-card-description">Atendimento no consultório com ambiente acolhedor e recursos especializados</p>
+              </span>
+            </div> 
+            <div class="modality-card">
+              <span class="image-box">
+                <img src="./assets/clock.svg" alt="">
+              </span>
+              <span>
+                <p class="modality-card-title">Online</p>
+                <p class="modality-card-description">Sessões virtuais com a mesma qualidade e eficácia do atendimento presencial</p>
+              </span>
+            </div> 
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="white-container" id="contact">
+      <div class="container-col">
+        <h2 class="contact-title">Entre em <b>Contato</b></h2>
+        <div class="contact-description">Estou aqui para ajudar você e sua família. Entre em contato para agendar uma consulta ou tira suas dúvidas.</div>
+        <div class="content">
+          <div class="contact-info">
+            <h2>Informações de Contato</h2>
+            <div class="cards-container">
+              <div class="contact-card">
+                <span class="image-box">
+                  <img src="./assets/phone.svg" alt="">
+                </span>
+                <span>
+                  <p class="contact-card-title">Telefone</p>
+                  <p class="contact-card-description">(21) 99999-9999</p>
+                </span>
+              </div>
+              <div class="contact-card">
+                <span class="image-box">
+                  <img src="./assets/map-pin.svg" alt="">
+                </span>
+                <span>
+                  <p class="contact-card-title">Localização</p>
+                  <p class="contact-card-description">Rio de Janeiro, RJ</p>
+                </span>
+              </div>
+              <div class="contact-card">
+                <span class="image-box">
+                  <img src="./assets/mail.svg" alt="">
+                </span>
+                <span>
+                  <p class="contact-card-title">Email</p>
+                  <p class="contact-card-description">contato@psicopedagoga.com</p>
+                </span>
+              </div>
+              <div class="contact-card">
+                <span class="image-box">
+                  <img src="./assets/clock.svg" alt="">
+                </span>
+                <span>
+                  <p class="contact-card-title">Horário</p>
+                  <p class="contact-card-description">Seg-Sex: 8h-18h</p>
+                </span>
+              </div> 
+            </div>
+            <div class="contact-image-block">
+              <p>Pronta para ajudar</p>
+              <p>Cada criança tem seu próprio ritmo e forma de aprende. Vamos descobrir juntos qual é o caminho ideal.</p>
+            </div>
+          </div>
+          <div class="forms-container">
+            <div class="whatsapp-card">
+              <span class="whatsapp-title-box">
+                <img src="./assets/message-circle-orange.svg" alt="">
+                <p>Agendar pelo WhatsApp</p>
+              </span>
+              <p>A forma mais rápida de agendar sua consulta</p>
+              <button class="message-btn" onclick="sendMessage()">
+                <img src="./assets/message-circle.svg" alt="">
+                Conversar no WhatsApp
+              </button>
+            </div>
+            <form action="" class="form" onsubmit="sendEmail(event)">
+              <span class="title-box">
+                <img src="./assets/mail-green.svg" alt="">
+                <b>Enviar Email</b>
+              </span>
+              <p>Preencha o formulário e retornarei em breve</p>
+              <div class="input-box">
+                <input type="text" name="name" class="input" placeholder="Seu nome" id="name" required>
+                <input type="email" name="email" class="input" placeholder="Seu email" id="email" required>
+              </div>
+              <input type="tel" name="phone" class="tel-input" placeholder="Seu telefone" id="phone" required>
+              <textarea name="message" class="textarea"
+              placeholder="Conte-me um pouco sobre sua necessidade..."
+              id="message"
+              required
+              ></textarea>
+              <input class="form-btn" type="submit" value="Enviar mensagem">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer-container">
+    <div class="content-footer">
+      <div class="personal-info">
+        <span class="title-container">
+          <img src="./assets/logo.jpeg" alt="" class="logo">
+          <p class="title-footer">Simone Garcia</p>
+        </span>
+        <p class="personal-description">Psicopedagoga especilizada em dificuldades de aprendizagem, ajudando pessoas a descobrirem e desenvolverem todo seu potencial.</p>
+        <span class="box-buttons">
+            <button class="short-message-btn" onclick="sendMessage()">
+              <img src="./assets/message-circle.svg" alt="">
+            </button>
+            <button class="short-email-btn" onclick="redirectEmail(event)">
+              <img src="./assets/mail.svg" alt="">
+            </button>
+        </span>
+      </div>
+      <div class="services-info">
+        <p class="title-footer">Serviços</p>
+        <ul>
+          <li>Avaliação Psicopedagógica</li>
+          <li>Intervenção Psicopedagógica</li>
+          <li>Orientação Familiar</li>
+          <li>Treinamento Cognitivo</li>
+          <li>Atendimento Online</li>
+        </ul>
+      </div>
+      <div class="contact-footer-info">
+        <p class="title-footer">Contato</p>
+        <ul>
+          <li class="contact-list">
+            <img src="./assets/message-circle-gray.svg" alt="">
+            <p>(21)99999-9999</p>
+          </li>
+          <li class="contact-list">
+            <img src="./assets/mail-gray.svg" alt="">
+            <p>contato@psicopedagoga.com</p>
+          </li>
+          <li class="contact-list">
+            <img src="./assets/map-pin-gray.svg" alt="">
+            <p>Rio de Janeiro, RJ</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright-box">
+    <div class="container">
+      <p>© 2025 Simone Garcia - Psicopedagoga. Todos os direitos reservados.</p>
+      <p>Feito com <img src="./assets/heart.svg" alt=""> para transformar vidas</p>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</html>
