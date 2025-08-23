@@ -22,7 +22,7 @@ function sendEmail(ev) {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   const message = document.getElementById("message").value;
-
+  const recipient = "gabriel.sogames01@gmail.com";
   
   const subject = encodeURIComponent("Contato via site");
   const emailBody =
