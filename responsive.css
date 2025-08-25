@@ -25,6 +25,15 @@
 }
 
 @media(max-width: 768px) {
+  .container-about {
+    flex-direction: column;
+  }
+
+  .about {
+    padding: 1rem 0.5rem;
+    margin: 0;
+  }
+
   .menu-container {
     display: none;
   }
