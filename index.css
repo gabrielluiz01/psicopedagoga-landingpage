@@ -79,8 +79,14 @@ html {
 .logo {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   object-fit: contain;
+}
+
+.logo-footer {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .menu ul {
@@ -283,6 +289,12 @@ html {
   margin-top: 25px;
   width: 90%;
   flex-direction: column;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 15px;
 }
 
 .card {
@@ -802,4 +814,201 @@ html {
 
 .copyright-box img {
   width: 12px;
+}
+
+.container-educational {
+  width: 100%;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.container-educational h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.container-educational p {
+  text-align: center;
+  font-size: 14px;
+  margin: 1rem 0;
+}
+
+.educational-materials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pdf-card {
+  width: 300px;
+  max-height: 510px;
+  height: 510px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+.pdf-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background-color: #f36;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.pages {
+  color: #FFF;
+  width: fit-content;
+  padding: 0.3rem 0.5rem;
+  border-radius: 50px;
+  background-color: #828D7D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  border: 1px solid #f3f3f3;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-footer button {
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin: 16px 0 10px 0;
+}
+
+.card-footer button:hover {
+  filter: brightness(90%);
+}
+
+.modal-hidden {
+  display: none !important;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.slider img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.nav-btn {
+  background-color: #ff6f0063;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.nav-btn:hover {
+  background-color: #EB9E6A;
+}
+
+#slide-counter {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #555;
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.thumbnail-row img {
+  height: 60px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
+}
+
+.thumbnail-row img.active {
+  border-color: #ff6f00;
 }

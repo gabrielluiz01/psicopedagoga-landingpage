@@ -179,7 +179,7 @@
                 <span class="image-box--orange">
                  <img src="./assets/brain.svg" alt="">
                </span>
-                <p class="service-title">Avaliação Neuropsicopedagógicas e Psicopedagógica</p>
+                <p class="service-title">Avaliação: Neuropsicopedagógicas e Psicopedagógica</p>
               </span>
               <p class="service-description">Diagnóstico completo para identificar dificuldades de aprendizagem e potencialidades</p>
               <ul class="service-list">
@@ -193,7 +193,7 @@
                 <span class="image-box--orange">
                  <img src="./assets/book-open.svg" alt="">
                </span>
-                <p class="service-title">Intervenção Neuropsicopedagógicas e Psicopedagógica</p>
+                <p class="service-title">Intervenção: Neuropsicopedagógicas e Psicopedagógica</p>
               </span>
               <p class="service-description">Acompanhamento personalizado para superar dificuldades e desenvolver habilidades</p>
               <ul class="service-list">
@@ -264,6 +264,25 @@
             </div>
           </div>
         </section>
+        <section class="container-educational">
+          <h2>Materiais Educativos</h2>      
+          <p>Recursos práticos desenvolvidos para apoiar pais, educadores e profissionais no desenvolvimento de estratégias eficazes de aprendizagem.</p>
+          <div class="educational-materials"></div>
+        </div>
+        <div id="modal" class="modal-hidden" onclick="closeModal()">
+          <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h3 id="modal-title"></h3>
+            <div class="slider">
+              <button class="nav-btn" onclick="prevSlide()">←</button>
+              <img id="slide-image" src="" alt="Página do PDF" />
+              <button class="nav-btn" onclick="nextSlide()">→</button>
+            </div>
+            <div id="thumbnail-row" class="thumbnail-row"></div>
+            <div id="slide-counter"></div>
+          </div>
+        </div>
+      </section>
       </div>
     </section>
     <section class="white-container" id="contact">
@@ -273,7 +292,7 @@
         <div class="content">
           <div class="contact-info">
             <h2>Informações de Contato</h2>
-            <div class="cards-container">
+            <div class="cards-grid">
               <div class="contact-card">
                 <span class="image-box">
                   <img src="./assets/phone.svg" alt="">
@@ -355,7 +374,7 @@
     <div class="content-footer">
       <div class="personal-info">
         <span class="title-container">
-          <img src="./assets/logo.jpeg" alt="" class="logo">
+          <img src="./assets/logo.jpeg" alt="" class="logo-footer">
           <p class="title-footer">Simone Garcia</p>
         </span>
         <p class="personal-description">Neuropsicopedagoga especilizada em dificuldades de aprendizagem, ajudando pessoas a descobrirem e desenvolverem todo seu potencial.</p>

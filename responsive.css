@@ -22,12 +22,17 @@
   .content-footer {
     max-width: 1000px;
   }
+
+  .educational-materials {
+    flex-wrap: wrap;
+  }
 }
 
 @media(max-width: 768px) {
   .container-about {
     flex-direction: column;
   }
+
 
   .about {
     padding: 1rem 0.5rem;
@@ -159,12 +164,23 @@
 
 @media(max-width: 650px) {
 
+
+  .educational-materials {
+    flex-direction: column;
+  }
+
   .contact-card {
     width: 100%;
   }
 
   .cards-container {
     flex-direction: column;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
   }
 
   .copyright-box p {
