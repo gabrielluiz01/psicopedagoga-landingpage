@@ -168,6 +168,24 @@ function prevSlide() {
   }
 }
 
+let startX = 0;
+
+slide.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+})
+
+slider.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diff = startX - endX;
+
+  if (diff > 50) {
+    nextSlide();
+  } else if (diff < -50) {
+    prevSlide();
+  }
+});
+
+
 function sendMessage() {
   const isMobile = /iPhone|Android|iPad|iPod|Mobile/i.test(navigator.userAgent);
 

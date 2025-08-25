@@ -164,6 +164,9 @@
 
 @media(max-width: 650px) {
 
+  .pdf-card {
+    width: 95%;
+  }
 
   .educational-materials {
     flex-direction: column;
