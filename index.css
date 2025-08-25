@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .menu-container {
   display: flex;
   justify-content: space-between;
@@ -23,6 +27,15 @@
 }
 
 .container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-about {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -129,7 +142,8 @@
 
 .content-info p {
   min-width: 75%;
-  width: 80%;
+  width: 78%;
+  margin-bottom: 10px;
 }
 
 .pill {
@@ -219,19 +233,22 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  margin: 1.5rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
   gap: 20px;
 }
 
 .experience-info span p {
+  width: 100%;
   font-size: 16px;
   text-align: center;
+  font-weight: bold;
 }
 
 .experience-info span p:last-child {
   font-size: 12px;
   width: 100%;
   margin-top: 5px;
+  font-weight: normal;
 }
 
 .image-block img {
@@ -242,7 +259,7 @@
 
 .about {
   width: 60%;
-  margin: 3rem 0;
+  margin: 3rem 0 3rem 5rem;
 }
 
 .about-title {
@@ -261,23 +278,59 @@
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  display: flex;
   gap: 15px;
   margin-top: 25px;
   width: 90%;
+  flex-direction: column;
 }
 
 .card {
-  width: 380px;
+  width: 100%;
   border: 1px solid #f3f3f3;
   border-radius: 8px;
   padding: 1rem 1.2rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 20px;
+  flex-direction: row;
+  box-sizing: border-box;
 }
+
+.card span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cert-list {
+  max-height: 120px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.cert-list.expanded {
+  max-height: 100%;
+}
+
+.card ul li {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.toggle-btn {
+  color: #EB9E6A;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 12px;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+
 
 .card-title {
   font-size: 16px;
@@ -319,7 +372,7 @@
 
 .description {
   min-width: 45%;
-  width: 45%;
+  width: 48%;
   max-width: 100%;
   margin: 15px 0;
   text-align: center;
@@ -391,8 +444,9 @@
 
 .modality-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  gap: 10px;
 }
 
 .modality-card {
@@ -447,9 +501,9 @@
 
 .contact-image-block {
   width: 100%;
-  height: 260px;
+  height: 380px;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
-    url("https://images.unsplash.com/photo-1650504148053-ae51b12dc1d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZCUyMGxlYXJuaW5nJTIwcHN5Y2hvbG9neXxlbnwxfHx8fDE3NTU3MTA3ODV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral");
+    url("./assets/image-first-section.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -463,11 +517,12 @@
 
 .contact-image-block p:first-child {
   color: #FFF;
+  font-size: 16px;
 }
 
 .contact-image-block p:last-child {
   color: #FFF;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 10px;
 }
 
@@ -522,6 +577,12 @@
   font-weight: bold;
 }
 
+.first-section-image {
+  width: 100%;
+  height: 580px !important;
+
+}
+
 .message-btn {
   background-color: #EB9E6A;
   display: flex;
@@ -553,6 +614,11 @@
 
 .form p:first-child {
   font-size: 14px;
+}
+
+.about-image {
+  width: 100%;
+  height: auto !important;
 }
 
 .input-box {

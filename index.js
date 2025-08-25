@@ -34,26 +34,28 @@ document.getElementById('phone').addEventListener('input', formatPhone);
 function sendEmail(ev) {
   ev.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
-  const recipient = "gabriel.sogames01@gmail.com";
-  
-  const subject = encodeURIComponent("Contato via site");
-  const emailBody =
-    `Nome: ${name}%0D%0AEmail: ${email}%0D%0ATelefone: ${phone}%0D%0AMensagem: ${message}`;
+   const templateParams = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value,
+    message: document.getElementById('message').value,
+    recipient: "rebecagarcia.ribeiro@gmail.com"
+  };
 
-  window.open(
-    `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${emailBody}`,
-    "_blank"
-  );
+  emailjs.send('service_1uoiiwn', 'template_125056w', templateParams)
+    .then(function(response) {
+      console.log('Email enviado!', response.status, response.text);
+      alert('Mensagem enviada com sucesso!');
+      document.getElementById('contactForm').reset();
+    }, function(error) {
+      console.error('Erro ao enviar email', error);
+      alert('Erro ao enviar a mensagem. Tente novamente.');
+    });
 }
 
 function redirectEmail(ev) {
   ev.preventDefault();
-  const recipient = "gabriel.sogames01@gmail.com";
-  window.open(`http://mail.google.com/mail/?view=cm&fm=1&to=${recipient}`);
+  window.location.href = "#form"
 }
 
 function closeMenu () {
@@ -67,3 +69,20 @@ function openMenu() {
 
   menu.style.display = "flex"
 }
+
+function toggleCertifications() {
+  const list = document.querySelector(".cert-list");
+  const toggleBtn = document.querySelector(".toggle-btn");
+
+  if (list.classList.contains("expanded")) {
+    list.style.maxHeight = "120px";
+    list.classList.remove("expanded");
+    toggleBtn.textContent = "Ver mais";
+  } else {
+    list.style.maxHeight = list.scrollHeight + "px";
+    list.classList.add("expanded");
+    toggleBtn.textContent = "Ver menos";
+  }
+}
+
+
