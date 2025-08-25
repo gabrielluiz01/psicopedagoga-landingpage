@@ -81,15 +81,20 @@ const pdfData = [
 const cardContainer = document.querySelector('.educational-materials');
 
 function renderCards() {
+  const isMobile = window.innerWidth <= 768;
   pdfData.forEach(card => {
     const div = document.createElement("div");
     div.className = "pdf-card";
+
+    const thumbnailSrc = isMobile ? card.slides?.[0] || card.thumbnail : card.thumbnail;
+
+
     div.innerHTML = `
       <div class="card-header">
         <span class="pages">${card.pages} páginas</span>
       </div>
       <div class="card-image">
-        <img src="${card.thumbnail}" alt="${card.title}" />
+        <img src="${thumbnailSrc}" alt="${card.title}" />
       </div>
       <div class="card-body">
         <h3>${card.title}</h3>
@@ -127,46 +132,53 @@ function closeModal() {
   modal.classList.add("modal-hidden");
 }
 
-function updateSlider() {
-  const img = document.getElementById("slide-image");
-  img.src = currentSlides[currentSlide];
+function updateSlider(direction = "left") {
+  const image = document.getElementById("slide-image");
   const counterEl = document.getElementById("slide-counter");
+  const thumbContainer = document.getElementById("thumbnail-row");
 
- if(counterEl) {
-  counterEl.textContent = `${currentSlide + 1} / ${currentSlides.length}`;
- } 
+  const newSrc = currentSlides[currentSlide];
 
- const thumbContainer = document.getElementById("thumbnail-row");
- thumbContainer.innerHTML = "";
+  image.classList.remove("slide-left", "slide-right");
+  void image.offsetWidth;
 
- currentSlides.forEach((src, index) => {
-  const thumb = document.createElement("img");
-  thumb.src = src;
-  
-  if(index === currentSlide) thumb.classList.add('active');
+  image.src = newSrc;
 
-  thumb.onclick = () => {
-    currentSlide = index;
-    updateSlider();
+  image.classList.add(direction === "left" ? "slide-left" : "slide-right");
+
+  if (counterEl) {
+    counterEl.textContent = `${currentSlide + 1} / ${currentSlides.length}`;
   }
 
-  thumbContainer.appendChild(thumb);
- })
+  thumbContainer.innerHTML = "";
+  currentSlides.forEach((src, index) => {
+    const thumb = document.createElement("img");
+    thumb.src = src;
+    if (index === currentSlide) thumb.classList.add("active");
+    thumb.onclick = () => {
+      const dir = index > currentSlide ? "left" : "right";
+      currentSlide = index;
+      updateSlider(dir);
+    };
+    thumbContainer.appendChild(thumb);
+  });
 }
 
 function nextSlide() {
   if(currentSlide < currentSlides.length - 1){
     currentSlide++;
-    updateSlider();
+    updateSlider("left");
   }
 }
 
 function prevSlide() {
   if(currentSlide > 0) {
     currentSlide--;
-    updateSlider();
+    updateSlider("right");
   }
 }
+
+const slider = document.querySelector('.slider');
 
 let startX = 0;
 let endX = 0;

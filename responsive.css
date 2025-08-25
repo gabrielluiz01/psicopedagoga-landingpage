@@ -160,6 +160,10 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
+  .nav-btn {
+    display: none;
+  }
 }
 
 @media(max-width: 650px) {
