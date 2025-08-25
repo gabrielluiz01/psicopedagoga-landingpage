@@ -169,13 +169,17 @@ function prevSlide() {
 }
 
 let startX = 0;
+let endX = 0;
 
-slide.addEventListener("touchstart", (e) => {
+slider.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
-})
+});
 
-slider.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
+slider.addEventListener("touchmove", (e) => {
+  endX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", () => {
   const diff = startX - endX;
 
   if (diff > 50) {
@@ -184,6 +188,7 @@ slider.addEventListener("touchend", (e) => {
     prevSlide();
   }
 });
+
 
 
 function sendMessage() {

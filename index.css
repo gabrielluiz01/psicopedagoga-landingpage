@@ -964,6 +964,7 @@ html {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  touch-action: pan-x;
 }
 
 .slider img {
@@ -973,7 +974,8 @@ html {
 }
 
 .nav-btn {
-  background-color: #ff6f0063;
+  /* background-color: #ff6f0063; */
+  background-color: red;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
