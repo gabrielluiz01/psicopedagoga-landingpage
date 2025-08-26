@@ -106,7 +106,7 @@
         <div class="about">
           <h2 class="about-title">Sobre <b>Simone Garcia</b></h2>
           <p class="about-description">Apaixonada pela aprendizagem e pelo desenvolvimento humano, integrando educação, ciência e saúde para oferecer um trabalho completo, humanizado e eficaz. Meu propósito é contribuir com cuidado e conhecimento para impulsionar o potencial de cada pessoa.</p>
-          <p class="about-description">Acredito que cada pessoa tem uma forma única de aprender, 
+          <p class="about-description">Acredito que cada um tem uma forma única de aprender, 
             e meu papel é descobrir qual é essa forma e criar estratégias personalizadas para que o aprendizado aconteça de maneira significativa.</p>
           <div class="cards-container">
             <div class="card">
@@ -150,7 +150,7 @@
               </span>
               <span>
                 <p class="card-title">Abordagem Humazinada</p>
-                <p class="card-description">Atendimento personalizado respeitando individualidade de cada pessoa</p>
+                <p class="card-description">Atendimento personalizado respeitando a individualidade de cada pessoa</p>
               </span>
             </div> 
             <div class="card">
@@ -365,6 +365,20 @@
               ></textarea>
               <input class="form-btn" type="submit" value="Enviar mensagem">
             </form>
+            <div id="successModal" class="modal">
+              <div class="modal-success-content">
+                <span class="close" onclick="closeModal('successModal')">&times;</span>
+                <h2>✅ Mensagem enviada!</h2>
+                <p>Obrigado pelo contato. Retornaremos em breve.</p>
+              </div>
+            </div>
+          <div id="errorModal" class="modal">
+            <div class="modal-error-content">
+              <span class="close" onclick="closeModal('errorModal')">&times;</span>
+              <h2>❌ Erro ao enviar</h2>
+              <p>Ocorreu um problema. Tente novamente mais tarde.</p>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -419,7 +433,7 @@
   </footer>
   <div class="copyright-box">
     <div class="container">
-      <p>© 2025 Simone Garcia - Psicopedagoga. Todos os direitos reservados.</p>
+      <p>© 2025 Gabriel Ribeiro - Desenvolvedor. Todos os direitos reservados.</p>
       <p>Feito com <img src="./assets/heart.svg" alt=""> para transformar vidas</p>
     </div>
   </div>

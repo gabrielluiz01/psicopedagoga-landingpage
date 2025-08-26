@@ -236,25 +236,52 @@ function formatPhone(event) {
 
 document.getElementById('phone').addEventListener('input', formatPhone);
 
+function showModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+   document.getElementById(id).style.display = 'none';
+}
+
 function sendEmail(ev) {
   ev.preventDefault();
+  const now = new Date();
+  const formattedTimestamp = now.toLocaleString('pt-BR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
 
-   const templateParams = {
+  const templateParams = {
     name: document.getElementById('name').value,
     email: document.getElementById('email').value,
     phone: document.getElementById('phone').value,
     message: document.getElementById('message').value,
-    recipient: "rebecagarcia.ribeiro@gmail.com"
+    timestamp: formattedTimestamp,
+    // recipient: "simonegarcia.educadora@gmail.com",
   };
 
-  emailjs.send('service_1uoiiwn', 'template_125056w', templateParams)
+  const form = document.getElementById("form");
+
+  emailjs.send('service_0vs7cxn', 'template_125056w', templateParams)
     .then(function(response) {
-      console.log('Email enviado!', response.status, response.text);
-      alert('Mensagem enviada com sucesso!');
-      document.getElementById('contactForm').reset();
+      showModal("successModal");
+      form.reset();
+      setTimeout(function() {
+      closeModal("successModal");
+    }, 3000);
+
     }, function(error) {
       console.error('Erro ao enviar email', error);
-      alert('Erro ao enviar a mensagem. Tente novamente.');
+      showModal("errorModal");      
+      setTimeout(function() {
+      closeModal("errorModal");
+    }, 3000);
+
     });
 }
 
